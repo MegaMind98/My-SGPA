@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+}
+main {
+    padding: 1em;
+    background: url("../img/grad-cap.jpg") #4e2e0e;
+    background-size: cover;
+    text-align: center;
+    font: 100% Lato, sans-serif;
+    color: white;
+}
+main * {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+main a {
+    text-decoration: none;
+}
+@keyframes transform {
+    from {
+        transform: rotate(8deg);
+    }
+}
+main ul {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 20em;
+    padding: 2em;
+    margin: 1em auto 3em;
+    border-top-right-radius: 100% 2%;
+    border-bottom-left-radius: 1% 100%;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background: #fffef0;
+    font-size: 120%;
+    text-align: left;
+}
+main ul::before,
+main ul::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: inherit;
+    box-shadow: inherit;
+    transform: rotate(-3deg);
+    animation: transform 0.4s cubic-bezier(0.25, 0.1, 0.4, 1.5);
+}
+main ul::after {
+    transform: rotate(2deg);
+}
+main:checked + [property=courseTitle] {
+    font-style: italic;
+    text-decoration: line-through;
+    color: gray;
+    mix-blend-mode: multiply;
+}
+main input::-webkit-input-placeholder {
+    font-style: italic;
+    color: #999;
+    mix-blend-mode: multiply;
+}
+main input::-moz-placeholder {
+    font-style: italic;
+    color: #999;
+    mix-blend-mode: multiply;
+}
+main button.mv-add-course {
+    padding: .2em .5em;
+    margin-top: 1em;
+    border-radius: .3em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #85c20a linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    box-shadow: 0 1px rgba(255, 255, 255, 0.5) inset, 0 0.1em 0.2em -0.1em black;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 120%;
+}
+main button.mv-add:hover {
+    background-color: orange;
+}
+main button.mv-add:active {
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.8) inset;
+    background-image: none;
+}
+main > header {
+    display: block;
+    margin: 2em 0 3em;
+    text-shadow: 0 -1px 3px black;
+    opacity: .9;
+    font-size: 120%;
+}
+main > header > h1 {
+    font-weight: 100;
+    font-size: 400%;
+    font-family: 'Lato', sans-serif;
+    opacity: .9;
+}
+main > header > p {
+    margin-top: .5em;
+}
+main body > footer {
+    display: block;
+    margin-top: 3em;
+    font-size: small;
+}
+main .auth-controls,
+main .progress {
+    mix-blend-mode: multiply;
+}
+main .mv-item-bar.mv-ui {
+    position: static;
+    pointer-events: auto;
+    opacity: 1;
+    mix-blend-mode: multiply;
+    border: 0;
+}
+label {
+    display: inline-block;
+    text-align: right;
+    width: 200px;
+    font-size: 14px;
+    line-height: 16px;
+}
+input,
+select {
+    display: inline-block;
+    background-color: #fff;
+    border: solid 1px #BBC5CE;
+    margin: 0;
+    padding: 7px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+li[property=course] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px dashed rgba(51, 85, 153, 0.5);
+    list-style: none;
+    color: #013;
+    font-size: 1.5rem;
+}
+li[property=course].mv-deleted {
+    padding: .3em;
+}
+li[property=course] label {
+    -ms-flex: 1;
+    flex: 1;
+    padding: .2em;
+    margin: .3em 0;
+    font-family: 'Lato', sans-serif;
+}
+strong {
+    font-size: 24px;
+}
+div.calculation {
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+}
+.dean-list {
+		color: hsl(80, 80%, 40%);
+		font-weight: bold;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <title>My SGPA - Calculate your SGPA</title>
+    <meta name="description" content="Calculate your SGPA! This is based on SGPA system utilized by Pokhara University.">
+    <meta name="author" content="Ashish Tiwari">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3F5167">
+    <meta name="apple-mobile-web-app-title" content="My SGPA">
+    <meta name="application-name" content="My SGPA">
+    <meta name="msapplication-tooltip" content="My SGPA">
+    <meta name="msapplication-starturl" content="https://aashishtiwari.com.np/labs/gpa">
+    <meta name="msapplication-TileImage" content="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-320.png">
+    <meta name="msapplication-TileColor" content="#3F5167">
+    <meta name="msapplication-navbutton-color" content="#3F5167">
+    <meta name="theme-color" content="#3F5167">
+    <meta property="fb:admins" content="100011044020894">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aashishtiwari.com.np/labs/gpa">
+    <meta property="og:site_name" content="Ashish Tiwari">
+    <meta property="og:title" content="Ashish Tiwari">
+    <meta property="og:image" content="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-320.png">
+    <meta property="og:description" content="Calculate your SGPA! This is based on SGPA system utilized by Pokhara University.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@MegaMindAT">
+    <meta name="twitter:title" content="Ashish Tiwari">
+    <meta name="twitter:description" content="Calculate your SGPA! This is based on SGPA system utilized by Pokhara University.">
+    <meta name="twitter:image" content="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-320.png">
+    <link rel="shortcut icon" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-16.png">
+    <link rel="icon" sizes="16x16" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-16.png">
+    <link rel="icon" sizes="32x32" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle-32.png">
+    <link rel="icon" sizes="700x700" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle.png">
+    <link rel="apple-touch-icon-precomposed" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle.png">
+    <link rel="image_src" href="https://aashishtiwari.com.np/assets/img/ashish-icon-circle.png">
+    <script src="https://get.mavo.io/mavo.es5.js"></script>
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+    <link rel="stylesheet" href="https://aashishtiwari.com.np/assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css" /
+    <link rel="stylesheet" href="https://aashishtiwari.com.np/assets/css/ashish-icon.css">
+  	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55449616-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div class="ashish main"><a href="https://aashishtiwari.com.np"><div></div></a></div>
+    <main mv-app="gpa" mv-storage="local" mv-bar="none" mv-mode="edit">
+      <header>
+        <h1>My SGPA</h1>
+        <p>Calculate your SGPA! This is based on SGPA system utilized by Pokhara University.</p>
+      </header>
+      <ul>
+        <li property="course" mv-multiple>
+
+          <label>
+            <select property="credit">
+              <option selected disabled>Credit Hour</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <select property="grade">
+              <option selected disabled>Grade</option>
+              <option value="4.0">A</option>
+              <option value="3.7">A-</option>
+              <option value="3.3">B+</option>
+              <option value="3.0">B</option>
+              <option value="2.7">B-</option>
+              <option value="2.3">C+</option>
+              <option value="2.0">C</option>
+              <option value="0">F</option>
+            </select>
+          </label>
+        </li>
+        <div class="calculation">
+          <p>Your &nbsp;<strong>SGPA</strong>&nbsp; is &nbsp;&nbsp;<strong><span property class="gpacalc">[(sum(grade * credit))/(sum(credit))]</span></strong>
+          </p>
+        </div>
+        <div class="dean-list" style="display: [iff(gpacalc > 3.7, block, none)]">Congratulations! You've made it to the Dean's List.</div>
+      </ul>
+    </main>
+    <footer>
+   <div class="ashish footer"><div></div></div>
+   <p>
+     <span>Made with <a href="https://mavo.io/" target="_blank">Mavo</a> and with &hearts; by Ashish </span> &nbsp;&middot;&nbsp; <a href="privacy/index.html" target="_blank">Privacy Policy</a><span class="cookie">&nbsp;&middot;&nbsp; <a href="/privacy/cookies/" target="_blank">Cookie Policy</a></span>
+   </p>
+ </footer>
+  </body>
+</html>
